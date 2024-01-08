@@ -26,8 +26,12 @@ Note that this may be subject to change depending on department requirements
 # Block Diagram
 
 # Configuration & Wiring
+![Pinout View](Documentation/Pinout%20View.png)
 
 # Legend for GUI
+![b0](Documentation/b0.png)
+![b4](Documentation/b0.png)
+![b6](Documentation/b0.png)
 
 | Prefix             | Description         |
 | ------------------ | ------------------- |
