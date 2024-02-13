@@ -85,7 +85,7 @@ void Flash_Read_Data(uint32_t StartPageAddress, __IO uint32_t *DATA_32) {
 
 void Convert_To_Str(uint32_t *data, char *str) {
 	// Assuming data is a null-terminated string
-	int numberofbytes = ((strlen(data) / 4) + ((strlen(data) % 4) != 0)) * 4;
+	int numberofbytes = ((strlen(data) / 4) + ((strlen(data) % 4) != 0)) * 4;//ignore warning, see documentation
 
 	for (int i = 0; i < numberofbytes; i++) {
 		str[i] = data[i / 4] >> (8 * (i % 4));
