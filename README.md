@@ -2,35 +2,37 @@
 
 ---
 
-# Prerelease Version
+# v0.1.0-beta Pre-PCB
 
 Reflow oven meant to be used by hardware and electronics. Includes various fixes
 
 - Lack of source code. This repo provides the source code in addition to the binaries.
-- Translation of German Code comments. I have kept the original text, and appended the translation side by side. Please do not delete the german comments.
+- Translation of German Code comments. I (@cognizaunce) have kept the original text, and appended the translation side by side. Please do not delete the german comments.
 - fix of several while loop and iterative mistakes. Modularization
 
 ## BOM
 
 Note that this may be subject to change depending on department requirements
 
-| Part                | Component                              | Quantity |
-| ------------------- | -------------------------------------- | -------- |
-| Microcontroller     | Blue Pill                              | 1        |
-| Nextion Display     | TBD                                    | 1        |
-| USB Power Source    | TBD                                    | 1        |
-| Toaster Oven        | Generic                                | 1        |
-| Thermo-coupler      | Any Generic (Ideally Type L or type J) | 1        |
-| Logic Level Shifter | 3.3V to 5V (any generic)               | 1        |
+| Part                  | Component                        | Quantity |
+| --------------------- | -------------------------------- | -------- |
+| Microcontroller       | Blue Pill                        | 1        |
+| Nextion Display       | 4.3" display                     | 1        |
+| USB Power Source      | TBD                              | 1        |
+| Toaster Oven          | Generic                          | 1        |
+| K-Type Thermo-coupler | MAX6675 breakout board (Generic) | 1        |
+| Prototype Board       | Keyestudio MEGA 2560 Prototype   | 1        |
+| Harwinn Connnectors   | M20-7822042 (0.1" Connector)     | 4        |
+| Logic Level Shifter   | 3.3V to 5V (any generic)         | 1        |
 
-# Block Diagram
+## Block Diagram
 
-# PID Controller
+## PID Controller
 
 ![Tuning PID Terms](documentation/Tuning%20PID%20Terms.png)
 Effects of d term can vary. do not simply increase without reason.
 
-# Configuration & Wiring
+## Configuration & Wiring
 
 ![Pinout View](documentation/Pinout%20View.png)
 
@@ -68,7 +70,7 @@ Effects of d term can vary. do not simply increase without reason.
 | NRST  | 7   | reset_state |
 | BOOT0 | 44  | reset_state |
 
-# Level Shifter Overview
+## Level Shifter Overview
 
 | Pin Name | Function                                    |
 | -------- | ------------------------------------------- |
@@ -85,7 +87,7 @@ Effects of d term can vary. do not simply increase without reason.
 | HV3      | Goes to Rx on nextion (receive)             |
 | HV4      | Goes to orange wire (power signal for oven) |
 
-# Legend for GUI
+## Legend for GUI
 
 - ![b0](documentation/b0.png)
   ![b6](documentation/b6.png)
@@ -96,18 +98,20 @@ Effects of d term can vary. do not simply increase without reason.
 | 'b'  is for button | Meant to be pressed |
 | 't' is for text    | Meant to be read    |
 
-# Future-Proofing:
+## Future-Proofing:
 
 - Add support for multiple thermocouplers
 
 - Add buzzer for cooldown period
 
-# Coding Overview
+## Coding Overview
 
-# To Do:
+## To Do:
 
 update stm binary and update nextion binary
 
 ~~refactor code for easier use~~
 
 Pcb revision 1
+
+Investigate whether Type L or type J thermocouples would have worked better, or a newer k-type board (MAX31885K)
