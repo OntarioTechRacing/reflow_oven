@@ -115,3 +115,6 @@ update stm binary and update nextion binary
 Pcb revision 1
 
 Investigate whether Type L or type J thermocouples would have worked better, or a newer k-type board (MAX31885K)
+
+## If Errors Appear during Compile:
+Please append linker flags to your project, namely: '-u _printf_float'
